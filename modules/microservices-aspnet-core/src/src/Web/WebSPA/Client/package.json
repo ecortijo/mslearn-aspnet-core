@@ -37,7 +37,7 @@
     "@angular/platform-server": "10.2.5",
     "@angular/router": "10.2.5",
     "@microsoft/signalr": "3.0.1",
-    "@ng-bootstrap/ng-bootstrap": "6.2.0",
+    "@ng-bootstrap/ng-bootstrap": "8.0.4",
     "bootstrap": "4.4.1",
     "core-js": "^3.0.0",
     "file-loader": "2.0.0",
