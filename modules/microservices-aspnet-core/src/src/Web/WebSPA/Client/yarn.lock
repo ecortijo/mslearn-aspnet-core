@@ -4213,10 +4213,10 @@
     "engine.io-parser" "~5.0.3"
     "ws" "~8.2.3"
 
-"enhanced-resolve@^4.3.0":
-  "integrity" "sha512-3e87LvavsdxyoCfGusJnrZ5G8SLPOFeHSNpZI/ATL9a5leXo2k0w6MKnbqhdBad9qTobSfB20Ld7UmgoNbAZkQ=="
-  "resolved" "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-4.3.0.tgz"
-  "version" "4.3.0"
+"enhanced-resolve@^4.5.0":
+  "integrity" "sha512-Nv9m36S/vxpsI+Hc4/ZGRs0n9mXqSWGGq49zxb/cJfPAQMbUtttJAlNPS4AQzaBdw/pKskw5bMbekT/Y7W/Wlg=="
+  "resolved" "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-4.5.0.tgz"
+  "version" "4.5.0"
   dependencies:
     "graceful-fs" "^4.1.2"
     "memory-fs" "^0.5.0"
@@ -5680,12 +5680,7 @@
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-3.3.10.tgz"
   "version" "3.3.10"
 
-"ignore@^5.1.9":
-  "integrity" "sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ=="
-  "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
-  "version" "5.2.0"
-
-"ignore@^5.2.0":
+"ignore@^5.1.9", "ignore@^5.2.0":
   "integrity" "sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ=="
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
   "version" "5.2.0"
@@ -9116,7 +9111,7 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
-"semver@^7.3.5":
+"semver@^7.3.5", "semver@7.3.5":
   "integrity" "sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.5.tgz"
   "version" "7.3.5"
@@ -9127,13 +9122,6 @@
   "integrity" "sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-7.0.0.tgz"
   "version" "7.0.0"
-
-"semver@7.3.5":
-  "integrity" "sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.5.tgz"
-  "version" "7.3.5"
-  dependencies:
-    "lru-cache" "^6.0.0"
 
 "send@0.17.2":
   "integrity" "sha512-UJYB6wFSJE3G00nEivR5rgWp8c2xXvJ3OPWPhmuteU0IKj8nKbG3DrjiOmLwpnHGYWAVwA69zmTm++YG0Hmwww=="
@@ -10539,7 +10527,42 @@
     "range-parser" "^1.2.1"
     "schema-utils" "^4.0.0"
 
-"webpack-dev-server@^4.0.0", "webpack-dev-server@4.7.4":
+"webpack-dev-server@^4.0.0", "webpack-dev-server@4.7.3":
+  "integrity" "sha512-mlxq2AsIw2ag016nixkzUkdyOE8ST2GTy34uKSABp1c4nhjZvH90D5ZRR+UOLSsG4Z3TFahAi72a3ymRtfRm+Q=="
+  "resolved" "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.7.3.tgz"
+  "version" "4.7.3"
+  dependencies:
+    "@types/bonjour" "^3.5.9"
+    "@types/connect-history-api-fallback" "^1.3.5"
+    "@types/serve-index" "^1.9.1"
+    "@types/sockjs" "^0.3.33"
+    "@types/ws" "^8.2.2"
+    "ansi-html-community" "^0.0.8"
+    "bonjour" "^3.5.0"
+    "chokidar" "^3.5.2"
+    "colorette" "^2.0.10"
+    "compression" "^1.7.4"
+    "connect-history-api-fallback" "^1.6.0"
+    "default-gateway" "^6.0.3"
+    "del" "^6.0.0"
+    "express" "^4.17.1"
+    "graceful-fs" "^4.2.6"
+    "html-entities" "^2.3.2"
+    "http-proxy-middleware" "^2.0.0"
+    "ipaddr.js" "^2.0.1"
+    "open" "^8.0.9"
+    "p-retry" "^4.5.0"
+    "portfinder" "^1.0.28"
+    "schema-utils" "^4.0.0"
+    "selfsigned" "^2.0.0"
+    "serve-index" "^1.9.1"
+    "sockjs" "^0.3.21"
+    "spdy" "^4.0.2"
+    "strip-ansi" "^7.0.0"
+    "webpack-dev-middleware" "^5.3.0"
+    "ws" "^8.1.0"
+
+"webpack-dev-server@4.7.4":
   "integrity" "sha512-nfdsb02Zi2qzkNmgtZjkrMOcXnYZ6FLKcQwpxT7MvmHKc+oTtDsBju8j+NMyAygZ9GW1jMEUpy3itHtqgEhe1A=="
   "resolved" "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.7.4.tgz"
   "version" "4.7.4"
@@ -10575,41 +10598,6 @@
     "webpack-dev-middleware" "^5.3.1"
     "ws" "^8.4.2"
 
-"webpack-dev-server@4.7.3":
-  "integrity" "sha512-mlxq2AsIw2ag016nixkzUkdyOE8ST2GTy34uKSABp1c4nhjZvH90D5ZRR+UOLSsG4Z3TFahAi72a3ymRtfRm+Q=="
-  "resolved" "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.7.3.tgz"
-  "version" "4.7.3"
-  dependencies:
-    "@types/bonjour" "^3.5.9"
-    "@types/connect-history-api-fallback" "^1.3.5"
-    "@types/serve-index" "^1.9.1"
-    "@types/sockjs" "^0.3.33"
-    "@types/ws" "^8.2.2"
-    "ansi-html-community" "^0.0.8"
-    "bonjour" "^3.5.0"
-    "chokidar" "^3.5.2"
-    "colorette" "^2.0.10"
-    "compression" "^1.7.4"
-    "connect-history-api-fallback" "^1.6.0"
-    "default-gateway" "^6.0.3"
-    "del" "^6.0.0"
-    "express" "^4.17.1"
-    "graceful-fs" "^4.2.6"
-    "html-entities" "^2.3.2"
-    "http-proxy-middleware" "^2.0.0"
-    "ipaddr.js" "^2.0.1"
-    "open" "^8.0.9"
-    "p-retry" "^4.5.0"
-    "portfinder" "^1.0.28"
-    "schema-utils" "^4.0.0"
-    "selfsigned" "^2.0.0"
-    "serve-index" "^1.9.1"
-    "sockjs" "^0.3.21"
-    "spdy" "^4.0.2"
-    "strip-ansi" "^7.0.0"
-    "webpack-dev-middleware" "^5.3.0"
-    "ws" "^8.1.0"
-
 "webpack-merge@5.8.0":
   "integrity" "sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q=="
   "resolved" "https://registry.npmjs.org/webpack-merge/-/webpack-merge-5.8.0.tgz"
@@ -10643,10 +10631,10 @@
   dependencies:
     "typed-assert" "^1.0.8"
 
-"webpack@^2.0.0 || ^3.0.0 || ^4.0.0", "webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.29.6", "webpack@^4.37.0 || ^5.0.0", "webpack@^5.0.0", "webpack@^5.1.0", "webpack@^5.12.0", "webpack@^5.30.0", "webpack@>=2", "webpack@>=4.0.1":
-  "integrity" "sha512-6KJVGlCxYdISyurpQ0IPTklv+DULv05rs2hseIXer6D7KrUicRDLFb4IUM1S6LUAKypPM/nSiVSuv8jHu1m3/Q=="
-  "resolved" "https://registry.npmjs.org/webpack/-/webpack-4.44.2.tgz"
-  "version" "4.44.2"
+"webpack@^2.0.0 || ^3.0.0 || ^4.0.0", "webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.46.0", "webpack@>=2", "webpack@>=4.0.1":
+  "integrity" "sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q=="
+  "resolved" "https://registry.npmjs.org/webpack/-/webpack-4.46.0.tgz"
+  "version" "4.46.0"
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/helper-module-context" "1.9.0"
@@ -10656,7 +10644,7 @@
     "ajv" "^6.10.2"
     "ajv-keywords" "^3.4.1"
     "chrome-trace-event" "^1.0.2"
-    "enhanced-resolve" "^4.3.0"
+    "enhanced-resolve" "^4.5.0"
     "eslint-scope" "^4.0.3"
     "json-parse-better-errors" "^1.0.2"
     "loader-runner" "^2.4.0"
@@ -10672,7 +10660,7 @@
     "watchpack" "^1.7.4"
     "webpack-sources" "^1.4.1"
 
-"webpack@5.70.0":
+"webpack@^5.0.0", "webpack@^5.1.0", "webpack@^5.12.0", "webpack@^5.30.0", "webpack@5.70.0":
   "integrity" "sha512-ZMWWy8CeuTTjCxbeaQI21xSswseF2oNOwc70QSKNePvmxE7XW36i7vpBMYZFAUHPwQiEbNGCEYIOOlyRbdGmxw=="
   "resolved" "https://registry.npmjs.org/webpack/-/webpack-5.70.0.tgz"
   "version" "5.70.0"
