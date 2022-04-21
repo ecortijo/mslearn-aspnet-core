@@ -58,7 +58,14 @@ export class OrdersNewComponent implements OnInit {
             .checkValidationCoupon(discountCode)
             .subscribe(
                 coupon => this.coupon = coupon,
-                error => this.couponValidationMessage = 'The coupon is not valid or it\'s been redeemed already!' );
+                error => {
+                    if (error.status == 404) {
+                        this.couponValidationMessage = `${error.error}!`;
+                    } else {
+                        this.couponValidationMessage = `ERROR: ${error.status} - ${error.statusText}!`;
+                    }
+                    console.log(error);
+                });
     }
 
     submitForm(value: any) {
