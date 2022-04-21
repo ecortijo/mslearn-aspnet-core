@@ -1,5 +1,6 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { OrdersService } from '../orders.service';
@@ -57,14 +58,7 @@ export class OrdersNewComponent implements OnInit {
             .checkValidationCoupon(discountCode)
             .subscribe(
                 coupon => this.coupon = coupon,
-                error => {
-                    if (error.status == 404) {
-                        this.couponValidationMessage = `${error.error}!`;
-                    } else {
-                        this.couponValidationMessage = `ERROR: ${error.status} - ${error.statusText}!`;
-                    }
-                    console.log(error);
-                });
+                error => this.couponValidationMessage = 'The coupon is not valid or it\'s been redeemed already!' );
     }
 
     submitForm(value: any) {
@@ -90,7 +84,7 @@ export class OrdersNewComponent implements OnInit {
             .pipe(catchError((errMessage) => {
                 this.errorReceived = true;
                 this.isOrderProcessing = false;
-                return Observable.throw(errMessage); 
+                return observableThrowError(errMessage); 
             }))
             .subscribe(res => {
                 this.router.navigate(['orders']);
