@@ -8,14 +8,14 @@ metadata:
 data:
   ASPNETCORE_ENVIRONMENT: Development
   ASPNETCORE_URLS: http://0.0.0.0:80
-  BasketApiClient: http://{{ .Values.aksLB }}/basket-api
+  BasketApiClient: {{ .Values.protocol }}://{{ .Values.host }}/basket-api
   ConnectionString: Server=sqldata;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-  CouponApiClient: http://{{ .Values.aksLB }}/coupon-api
+  CouponApiClient: {{ .Values.protocol }}://{{ .Values.host }}/coupon-api
   DPConnectionString: basketdata
   IsClusterEnv: "True"
   OrchestratorType: K8S
-  OrderingApiClient: http://{{ .Values.aksLB }}/ordering-api
+  OrderingApiClient: {{ .Values.protocol }}://{{ .Values.host }}/ordering-api
   PATH_BASE: /identity
-  SpaClient: http://{{ .Values.aksLB }}
+  SpaClient: {{ .Values.protocol }}://{{ .Values.host }}
   UseCustomizationData: "True"
-  WebShoppingAggClient: http://{{ .Values.aksLB }}/webshoppingagg
+  WebShoppingAggClient: {{ .Values.protocol }}://{{ .Values.host }}/webshoppingagg
