@@ -8,17 +8,17 @@ metadata:
 data:
   ASPNETCORE_ENVIRONMENT: Docker
   ASPNETCORE_URLS: http://0.0.0.0:80
-  CallBackUrl: http://{{ .Values.aksLB }}
+  CallBackUrl: {{ .Values.protocol }}://{{ .Values.host }}
   DPConnectionString: basketdata
-  BasketUrl: http://{{ .Values.aksLB }}/apigateway
-  CallBackUrl: http://{{ .Values.aksLB }}/
-  IdentityUrl: http://{{ .Values.aksLB }}/identity
+  BasketUrl: {{ .Values.protocol }}://{{ .Values.host }}/apigateway
+  CallBackUrl: {{ .Values.protocol }}://{{ .Values.host }}/
+  IdentityUrl: {{ .Values.protocol }}://{{ .Values.host }}/identity
   IdentityUrlHC: http://identity-api/hc
   IsClusterEnv: "True"
   OrchestratorType: K8S
   PATH_BASE: /
-  PurchaseUrl: http://{{ .Values.aksLB }}/apigateway
+  PurchaseUrl: {{ .Values.protocol }}://{{ .Values.host }}/apigateway
   PurchaseUrlHC: http://ordering-api/hc
-  SignalrHubUrl: http://{{ .Values.aksLB }}/apigateway
+  SignalrHubUrl: {{ .Values.protocol }}://{{ .Values.host }}/apigateway
   UseCustomizationData: "True"
   UseLoadTest: "False"

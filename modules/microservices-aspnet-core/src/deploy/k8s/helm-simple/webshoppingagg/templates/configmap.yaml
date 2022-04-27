@@ -10,7 +10,7 @@ data:
   BasketUrlHC: http://basket-api/hc
   CatalogUrlHC: http://catalog-api/hc
   #DISCOUNT-COUPON-COMMENT**CouponUrlHC: http://coupon-api/hc
-  IdentityUrlExternal: http://{{ .Values.aksLB }}/identity
+  IdentityUrlExternal: {{ .Values.protocol }}://{{ .Values.host }}/identity
   IdentityUrlHC: http://identity-api/hc
   OrderingUrlHC: http://ordering-api/hc
   PATH_BASE: /webshoppingagg
