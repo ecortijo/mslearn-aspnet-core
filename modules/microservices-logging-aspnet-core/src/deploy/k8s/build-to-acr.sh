@@ -1,21 +1,13 @@
 #!/bin/bash
 
-# Color theming
-if [ -f ~/clouddrive/aspnet-learn/setup/theme.sh ]
-then
-  . <(cat ~/clouddrive/aspnet-learn/setup/theme.sh)
-fi
-
 echo
 echo "Building images to ACR"
 echo "======================"
 
-if [ -f ~/clouddrive/aspnet-learn/create-acr-exports.txt ]
+if [ -f ~/clouddrive/source/create-acr-exports.txt ]
 then
-  eval $(cat ~/clouddrive/aspnet-learn/create-acr-exports.txt)
+  eval $(cat ~/clouddrive/source/create-acr-exports.txt)
 fi
-
-pushd ~/clouddrive/aspnet-learn/src/deploy/k8s > /dev/null
 
 if [ -z "$ESHOP_REGISTRY" ] || [ -z "$ESHOP_ACRNAME" ]
 then
@@ -49,7 +41,7 @@ else
     serviceList=${services//,/ }
 fi
 
-pushd ../..  > /dev/null
+pushd ../..
 
 for service in $serviceList
 do
@@ -61,10 +53,7 @@ do
 
     echo
     echo "Building image \"$image\" for service \"$service\" with \"$dockerfile.acr\"..."
-    serviceCmd="az acr build -r $ESHOP_ACRNAME -t $ESHOP_REGISTRY/$image:linux-latest -f $dockerfile.acr ."
-    echo "${newline} > ${azCliCommandStyle}$serviceCmd${defaultTextStyle}${newline}"
-    eval $serviceCmd
+    az acr build -r $ESHOP_ACRNAME -t $ESHOP_REGISTRY/$image:linux-latest -f $dockerfile.acr .
 done
-    
-popd > /dev/null
-popd > /dev/null
+
+popd
