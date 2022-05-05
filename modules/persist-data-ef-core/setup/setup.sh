@@ -14,7 +14,7 @@
 declare moduleName="persist-data-ef-core"
 
 # dotnet SDK version
-declare -x dotnetSdkVersion="3.0.100"
+declare -x dotnetSdkVersion="6.0.202"
 
 # Any other declarations we need
 declare -x gitBranch="live"

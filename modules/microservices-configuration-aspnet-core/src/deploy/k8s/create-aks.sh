@@ -114,7 +114,6 @@ az aks get-credentials -n $eshopAksName -g $eshopRg --overwrite-existing
 echo
 echo "Installing Nginx ingress controller..."
 kubectl apply -f ingress-controller/nginx-controller.yaml
-kubectl apply -f ingress-controller/nginx-loadbalancer.yaml
 
 echo
 echo "Getting Load Balancer public IP..."
@@ -139,7 +138,7 @@ done
 
 while [ "$eshopLbIp" == "" ] || [ "$eshopLbIp" == "<pending>" ]
 do
-    eshopLbIp=`kubectl get svc/ingress-nginx -n ingress-nginx -o jsonpath='{.status.loadBalancer.ingress[0].ip}'`
+    eshopLbIp=`kubectl get svc/ingress-nginx-controller -n ingress-nginx -o jsonpath='{.status.loadBalancer.ingress[0].ip}'`
     if [ "$eshopLbIp" == "" ]
     then
         echo "Waiting for the Load Balancer IP address - Ctrl+C to cancel..."
