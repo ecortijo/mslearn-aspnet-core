@@ -149,7 +149,7 @@ kubectl apply -f ingress-controller/nginx-mandatory.yaml
 echo
 echo "Getting load balancer public IP"
 
-k8sLbTag="ingress-nginx/ingress-nginx"
+k8sLbTag="ingress-nginx/ingress-nginx-controller"
 aksNodeRGCommand="az aks list --query \"[?name=='$eshopAksName'&&resourceGroup=='$eshopRg'].nodeResourceGroup\" -otsv"
 
 retry=5
