@@ -32,32 +32,7 @@ echo "Updating existing AKS deployment..."
 
 pushd ~/clouddrive/aspnet-learn/src/deploy/k8s
 
-# Uninstall charts to be updated
-for chart in webspa webstatus webshoppingagg
-do
-    echo
-    echo "Uninstalling chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm delete eshoplearn-$chart${defaultTextStyle}${newline}"
-    helm delete eshoplearn-$chart
-done
-
-# Install reconfigured charts from Docker Hub
-for chart in webstatus webshoppingagg
-do
-    echo
-    echo "Installing chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm install eshoplearn-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
-    helm install eshoplearn-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
-done
-
-# Install charts for new and updated applications from ACR
-for chart in coupon webspa 
-do
-    echo
-    echo "Installing chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm install eshoplearn-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
-    helm install eshoplearn-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
-done
+./deploy-application.sh --charts webspa,webstatus,webshoppingagg,coupon
 
 popd
 
