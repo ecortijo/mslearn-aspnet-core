@@ -37,8 +37,8 @@ for chart in webspa webstatus webshoppingagg
 do
     echo
     echo "Uninstalling chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm uninstall eshop-$chart${defaultTextStyle}${newline}"
-    helm uninstall eshop-$chart
+    echo "${newline}${genericCommandStyle}helm delete eshoplearn-$chart${defaultTextStyle}${newline}"
+    helm delete eshoplearn-$chart
 done
 
 # Install reconfigured charts from Docker Hub
@@ -46,8 +46,8 @@ for chart in webstatus webshoppingagg
 do
     echo
     echo "Installing chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm install eshop-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
-    helm install eshop-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
+    echo "${newline}${genericCommandStyle}helm install eshoplearn-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
+    helm install eshoplearn-$chart --set registry=eshoplearn --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
 done
 
 # Install charts for new and updated applications from ACR
@@ -55,8 +55,8 @@ for chart in coupon webspa
 do
     echo
     echo "Installing chart \"$chart\"..."
-    echo "${newline}${genericCommandStyle}helm install eshop-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
-    helm install eshop-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
+    echo "${newline}${genericCommandStyle}helm install eshoplearn-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP \"helm-simple/$chart\"${defaultTextStyle}${newline}"
+    helm install eshoplearn-$chart --set registry=$ESHOP_REGISTRY --set aksLB=$ESHOP_LBIP "helm-simple/$chart"
 done
 
 popd
