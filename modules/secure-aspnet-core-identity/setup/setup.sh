@@ -17,7 +17,7 @@ declare -x dbType=$1
 declare moduleName="secure-aspnet-core-identity"
 
 # dotnet SDK version
-declare -x dotnetSdkVersion="6.0.202"
+declare -x dotnetSdkVersion="3.1.406"
 
 # Any other declarations we need
 declare -x gitBranch="live"
