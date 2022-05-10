@@ -22,7 +22,7 @@ if ! [ $defaultRegion ]
 then
     declare defaultRegion=centralus
 fi
-declare -x gitBranch="live"
+declare -x gitBranch="net6/release-microservices-aspnet-core"
 declare initScript=https://raw.githubusercontent.com/ecortijo/mslearn-aspnet-core/$gitBranch/infrastructure/scripts/initenvironment.sh
 declare suppressAzureResources=true
 declare rootLocation=~/clouddrive
