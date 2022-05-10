@@ -14,7 +14,7 @@ data:
   EventBusConnection: rabbitmq
   GRPC_PORT: "81"
   identityUrl: http://identity-api
-  IdentityUrlExternal: {{ .Values.protocol }}://{{ .Values.host }}/identity
+  IdentityUrlExternal: http://{{ .Values.aksLB }}/identity
   OrchestratorType: K8S
   PATH_BASE: /ordering-api
   PORT: "80"

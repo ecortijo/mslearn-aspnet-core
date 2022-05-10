@@ -11,6 +11,6 @@ data:
   ConnectionString: basketdata
   EventBusConnection: rabbitmq
   identityUrl: http://identity-api
-  IdentityUrlExternal: {{ .Values.protocol }}://{{ .Values.host }}/identity
+  IdentityUrlExternal: http://{{ .Values.aksLB }}/identity
   OrchestratorType: K8S
   PATH_BASE: /basket-api
