@@ -5,7 +5,7 @@
 # going on within this script. We've provided what we hope are useful
 # comments inline, as well as color-coded relevant shell output.
 # We hope it's useful for you, but if you have any questions or suggestions
-# please open an issue on https:/github.com/MicrosoftDocs/mslearn-aspnet-core.
+# please open an issue on https:/github.com/ecortijo/mslearn-aspnet-core.
 #
 
 ## Start
@@ -21,7 +21,7 @@ declare -x dotnetSdkVersion="3.1.406"
 
 # Any other declarations we need
 declare -x gitBranch="live"
-declare initScript=https://raw.githubusercontent.com/MicrosoftDocs/mslearn-aspnet-core/$gitBranch/infrastructure/scripts/initenvironment.sh
+declare initScript=https://raw.githubusercontent.com/ecortijo/mslearn-aspnet-core/$gitBranch/infrastructure/scripts/initenvironment.sh
 declare -x projectRootDirectory="ContosoPets.Ui"
 
 # If the script appears to have already been run, just set the vars and leave.
