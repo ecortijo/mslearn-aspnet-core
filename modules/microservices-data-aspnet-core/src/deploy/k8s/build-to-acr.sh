@@ -56,7 +56,7 @@ do
 
     echo
     echo "Building image \"$image\" for service \"$service\" with \"$dockerfile.acr\"..."
-    az acr build -r $ESHOP_ACRNAME -t $ESHOP_REGISTRY/$image:linux-coupon -f $dockerfile.acr .
+    az acr build -r $ESHOP_ACRNAME -t $ESHOP_REGISTRY/$image:linux-net6-coupon -f $dockerfile.acr .
 done
 
 popd
